@@ -1,4 +1,5 @@
-# ConsoleEdit; From late stage beginner for late stage beginners (I'm sure that code is pretty shitty, buuut this is better than nothing)
+# ConsoleEdit 
+From late stage beginner for late stage beginners (I'm sure that code is pretty shitty, buuut this is better than nothing)
 
 In console Text editor like vim, made with https://cheuksblog.ca/tutorial/c++/2015/02/04/ncurses-editor-tutorial-03.html but ported to c#.
 I'm using ported cpp Ncurses library from @rnowley which you can find here: https://github.com/rnowley/csharp-ncurses
