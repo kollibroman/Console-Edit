@@ -11,6 +11,7 @@ namespace txtEditor
         static void Main(int argc, string[] args)
         {
             var init = new Init();
+            var ed = new Editor();
             string fn = "";
 
            WriteLine("Welcome to the shitty txt editor!");
@@ -18,9 +19,23 @@ namespace txtEditor
            if(argc > 1)
            {
                fn = args[1];
+               ed = new Editor(fn);
+           }
+           else
+           {
+               ed = new Editor();
            }
 
             init.curses_init();
+
+            while(ed.getMode() != 'x')
+            {
+                ed.updateStatus();
+                ed.printStatusLine();
+                ed.PrintBuff();
+                ConsoleKeyInfo input = ReadKey();
+                ed.handleInput(input);
+            }
 
             Refresh();
             EndWin();
