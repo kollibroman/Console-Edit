@@ -3,6 +3,7 @@ using csharpncurses;
 using System.IO;
 using System.Diagnostics;
 using static csharpncurses.NCurses;
+using static System.Console;
 
 namespace txtEditor
 {
@@ -60,37 +61,83 @@ namespace txtEditor
 
         private void MoveUp()
         {
-            
+            if(y-1 >= 0) y--;
+            if(x >= buff.lines[y].Length)
+            {
+                x = buff.lines[y].Length;
+            }
+            Move(x, y);
         }
 
         private void MoveDown()
         {
-
+            if(y + 1 < Console.WindowHeight && y + 1 < buff.lines.Count)
+            {
+                y++;
+            }
+            if(x >= buff.lines[y].Length)
+            {
+                x = buff.lines[y].Length;
+            }
+            Move(x, y);
         }
 
         private  void MoveLeft()
         {
-
+            if(x-1 >= 0)
+            {
+                x--;
+                Move(x, y);
+            }
         }
 
         private  void MoveRight()
         {
-
+            if(x+1 < Console.WindowWidth && x+1 <= buff.lines[y].Length)
+            {
+                x++;
+                Move(x, y);
+            }
         }
 
         private  void DeleteLine()
         {
-
+            buff.removeLine(y);
         }
 
         private  void DeleteLine(int line)
         {
-
+            buff.removeLine(line);
         }
 
         private  void SaveFile()
         {
+            if(filename == " ")
+            {
+                filename = "untitiled.txt";
+            }
 
+             try
+            {
+                using (var fs = new FileStream(filename, FileMode.Create))
+                {
+                    // Open the text file using a stream reader.
+                    using (var sw = new StreamWriter(fs))
+                    {
+                        for (var i = 0; i < buff.lines.Count; i++)
+                        {
+                            sw.WriteLine(buff.lines[i]);
+                        }
+                        status = "Saved to file!";
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("The file {0} could not be read:", filename);
+                Debug.WriteLine(e.Message);
+                status = "Error: Cannot open file for writing!";
+            }
         }
 
         public char getMode()
@@ -226,12 +273,28 @@ namespace txtEditor
 
         public void PrintBuff()
         {
-
+            for(int i = 0; i < Console.WindowHeight; i++)
+            {
+                if(i >= buff.lines.Count)
+                {
+                    Move(i, 0);
+                    ClearToEndOfLine();
+                }
+                else 
+                {
+                    Write(buff.lines[i], i, 0);
+                }
+                ClearToEndOfLine();
+            }
+            Move(x, y);
         }
 
         public void printStatusLine()
         {
-
+            AttributeOn((uint)NCursesAttribute.REVERSE);
+            Write(status, WindowHeight - 1, 0);
+            ClearToEndOfLine();
+            AttributeOff((uint)NCursesAttribute.REVERSE);
         }
 
         public void updateStatus()
