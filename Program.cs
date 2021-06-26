@@ -8,7 +8,6 @@ namespace txtEditor
 {
     class Program
     {
-        public int argc;
         static  void Main(string[] args)
         {
             var prg = new Program();
@@ -16,9 +15,7 @@ namespace txtEditor
             var ed = new Editor();
             string fn = "";
 
-           WriteLine("Welcome to the shitty txt editor!");
-
-           if(prg.argc > 1)
+           if(args.Length > 1)
            {
                fn = args[1];
                ed = new Editor(fn);

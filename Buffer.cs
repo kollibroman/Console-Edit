@@ -4,7 +4,7 @@ using static csharpncurses.NCurses;
 
 namespace txtEditor
 {
-    public unsafe class Buffer
+    public unsafe class Buffer //here works
     {
        public  List<string> lines;
         public Buffer()

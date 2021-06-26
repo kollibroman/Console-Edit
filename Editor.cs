@@ -5,7 +5,7 @@ using System.Diagnostics;
 using static csharpncurses.NCurses;
 using static System.Console;
 
-namespace txtEditor
+namespace txtEditor  //here works
 {
     public class Editor : Screen
     {

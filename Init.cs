@@ -6,7 +6,7 @@ namespace txtEditor
 {
     public class Init
     {
-        private readonly IntPtr _stdscr;
+        private  IntPtr _stdscr;
 
         public void curses_init()
         {
