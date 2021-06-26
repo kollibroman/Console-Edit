@@ -5,8 +5,6 @@
 /home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/txtEditor.dll
 /home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/ref/txtEditor.dll
 /home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/txtEditor.pdb
-/home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/tui-netcore.dll
-/home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/txtEditor.csprojAssemblyReference.cache
 /home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/txtEditor.GeneratedMSBuildEditorConfig.editorconfig
 /home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/txtEditor.AssemblyInfoInputs.cache
 /home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/txtEditor.AssemblyInfo.cs
@@ -16,3 +14,10 @@
 /home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/ref/txtEditor.dll
 /home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/txtEditor.pdb
 /home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/txtEditor.genruntimeconfig.cache
+/home/kollibroman/losoweProjekty/txtEditor/obj/Debug/net5.0/txtEditor.csproj.AssemblyReference.cache
+/home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/dotnet-curses.dll
+/home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/Microsoft.DotNet.PlatformAbstractions.dll
+/home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
+/home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/Newtonsoft.Json.dll
+/home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/csharp-ncurses.dll
+/home/kollibroman/losoweProjekty/txtEditor/bin/Debug/net5.0/csharp-ncurses.pdb

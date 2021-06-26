@@ -8,15 +8,17 @@ namespace txtEditor
 {
     class Program
     {
-        static void Main(int argc, string[] args)
+        public int argc;
+        static  void Main(string[] args)
         {
+            var prg = new Program();
             var init = new Init();
             var ed = new Editor();
             string fn = "";
 
            WriteLine("Welcome to the shitty txt editor!");
 
-           if(argc > 1)
+           if(prg.argc > 1)
            {
                fn = args[1];
                ed = new Editor(fn);
