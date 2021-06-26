@@ -6,4 +6,4 @@ I'm using ported cpp Ncurses library from @rnowley which you can find here: http
 Can be same with parts of code from @McNeight,where he made this in a hard way, here is a link to his repo: https://github.com/McNeight/CheukEdit
 Not sure to this moment if it works because of the Ncurses wrapper which was written in netstandard 2.0 times. After test I will update reame.md
 
-Soooo as I said earlier, after testing it out it doesn't work.  Need to fix problem with InitScreen() exception
+Soooo as I said earlier, after testing it out it doesn't work. For this moment it is issue withc-sharp-ncurses, I will try to fix it
